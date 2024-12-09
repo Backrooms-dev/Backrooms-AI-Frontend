@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "NoScary";
+    src: url(fonts/NoScary-regular.ttf);
+}
+
+@font-face {
+    font-family: "ScaryThin";
+    src: url(fonts/Scarythin\ St.ttf);
+}
+
+@font-face {
+    font-family: "Nightmare";
+    src: url(fonts/Nightmare.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VCR";
+    src: url(fonts/VCR_OSD_MONO_1.001.ttf) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    font-family: "ScaryThin", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-position: left center;
+}
+
+.everything {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 10vw;
+    font-family: "VCR";
+    font-weight: 400;
+    color: white;
+    margin-top: 3vh;  
+    text-shadow: 
+        -0.3vw -0.3vw 0 black, /* Ombre extérieure : haut gauche */
+        0.3vw -0.3vw 0 black,  /* Ombre extérieure : haut droite */
+        -0.3vw 0.3vw 0 black,  /* Ombre extérieure : bas gauche */
+        0.3vw 0.3vw 0 black,
+        0 0 50px rgba(0, 0, 0, 1), 0 0 20px rgba(0, 0, 0, 0.23), 0 0 30px rgba(0, 0, 0, 0.23);   /* Ombre extérieure : bas droite */
+    }
+
+.content a{
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.content a:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    object-position: left center;
+}
+
+.hazmat {
+    margin-top: 30vh;
+    margin-left: 30vw;
+    height: 47vw; /* L'image ne dépassera pas la largeur du conteneur */
+    object-fit: contain; /* Maintient les proportions */
+    position: absolute;
+}
+
+.buttons-container {
+    position: relative;
+    align-content: end;
+    padding-right: 2vh;
+    padding-bottom: 2vh;
+    z-index: 0;
+}
+
+.buttons {
+    position: relative;
+    
+}
+
+.buttons h2{
+    font-family: "VCR";
+    font-size: 3vh;
+    text-align: right;
+    color: white;
+    text-shadow: 
+        -0.25vh -0.25vh 0 black, /* Ombre extérieure : haut gauche */
+        0.25vh -0.25vh 0 black,  /* Ombre extérieure : haut droite */
+        -0.25vh 0.25vh 0 black,  /* Ombre extérieure : bas gauche */
+        0.25vh 0.25vh 0 black;
+}
+
+.buttons h2 a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Utilise la couleur du parent (h2) */
+    transition: color 0.2s; /* Effet fluide au survol */
+}
+
+.buttons h2 a:hover {
+    color: #b32e16; /* Couleur différente au survol */
+}
+
+.pump{
+margin-bottom: 2vw;    
+}
+
+.matrix-button-container {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    align-items: center; /* Centre le bouton verticalement */
+    position: relative;
+    z-index: 1000;
+    margin-top: 40vh;
+}
+
+.matrix-button {
+    background: black; /* Fond noir */
+    color: #00ff00; /* Texte vert Matrix */
+    font-family: "Courier New", Courier, monospace; /* Style monospace */
+    font-size: 2.5vh; /* Taille du texte */
+    border: 2px solid #00ff00; /* Bordure verte */
+    padding: 2vh 4vh; /* Espacement interne */
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 2px; /* Espacement des lettres */
+    cursor: pointer; /* Curseur en main au survol */
+    transition: all 0.3s ease; /* Transition fluide */
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Éclat vert */
+}
+
+.matrix-button:hover {
+    background: #00ff00; /* Fond vert au survol */
+    color: black; /* Texte noir au survol */
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00; /* Éclat renforcé */
+    transform: scale(1.1); /* Léger agrandissement au survol */
+}
+
+.matrix-button:active {
+    background: black; /* Fond noir quand cliqué */
+    color: #00ff00; /* Texte vert */
+    transform: scale(1); /* Réduction pour l'effet de clic */
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+    .background-clip{
+        width: 100%;
+        height: auto;
+
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .background-clip{
+        width: auto;
+        height: 100%;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 12vw; /* Réduit la taille de la police */
+        text-align: center; /* Centre le texte */
+        line-height: 1.2; /* Ajuste l'interligne pour une meilleure lisibilité */
+        margin-top: 10vw;
+    }
+
+    .hazmat {
+        height: 50vh;
+        margin-top: -15vw;
+        margin-left: 0vw;
+    }
+
+    .buttons-container {
+        position: ab;
+        align-content: top;
+        padding-bottom: 70vh;
+        z-index: 0;
+        margin-top: 5vh;
+        padding-right: 0vh;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons h2{
+        text-align: center;
+    }
+
+    .matrix-button-container {
+        margin-top: 55vh;
+    }
+
+    .matrix-button {
+        background: black; /* Fond noir */
+        color: #00ff00; /* Texte vert Matrix */
+        font-family: "Courier New", Courier, monospace; /* Style monospace */
+        font-size: 2.5vh; /* Taille du texte */
+        border: 2px solid #00ff00; /* Bordure verte */
+        padding: 2vh 2vh; /* Espacement interne */
+        text-transform: uppercase; /* Texte en majuscules */
+        letter-spacing: 2px; /* Espacement des lettres */
+        cursor: pointer; /* Curseur en main au survol */
+        transition: all 0.3s ease; /* Transition fluide */
+        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Éclat vert */
+    }
+}
+

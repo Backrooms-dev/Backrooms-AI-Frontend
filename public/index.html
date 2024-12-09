@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Explore the Backrooms</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/loaders/GLTFLoader.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <video autoplay loop muted playsinline class="background-clip">
+            <source src="images/bgvideobackrooms.mp4" type="video/mp4">
+            <!-- Message de fallback si la vidéo ne charge pas -->
+            Your browser does not support the video tag.
+        </video>
+
+        <audio id="background-audio" autoplay loop>
+            <source src="audio/audio.mp3" type="audio/mp3">
+            <!-- Message de fallback si l'audio ne charge pas -->
+            Your browser does not support the audio tag.
+        </audio>
+        <script>
+            const audio = document.getElementById("background-audio");
+
+// Définir le volume (par exemple, à 50%)
+audio.volume = 0.2;
+        </script>
+    
+        <img src="images/hazmat4.png" alt="Hazmat" class="hazmat"/>
+
+        <div class="everything">
+        <div class="content">
+            <h1>$BACKROOMS AI</h1>
+        </div>
+
+        <div class="matrix-button-container">
+            <a href="backrooms.html">
+                <button class="matrix-button">Contact the AI Backrooms</button>
+            </a>
+        </div>
+        
+
+        <div class="buttons-container">
+            <div class="buttons">
+                <h2 class="pump"><a href="https://pump.fun" target="_blank">pump.fun</a></h2>
+                <h2><a href="https://x.com/BACKROOMS_Token" target="_blank">Twitter</a></h2>
+                <h2><a href="https://t.me/backrooms_sol" target="_blank">Telegram</a></h2>
+                <h2><a href="https://dexscreener.com" target="_blank">Dexscreener</a></h2>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+</html>
