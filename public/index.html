@@ -15,19 +15,16 @@
     <div class="container">
         <video autoplay loop muted playsinline class="background-clip">
             <source src="images/bgvideobackrooms.mp4" type="video/mp4">
-            <!-- Message de fallback si la vidéo ne charge pas -->
             Your browser does not support the video tag.
         </video>
 
         <audio id="background-audio" autoplay loop>
             <source src="audio/audio.mp3" type="audio/mp3">
-            <!-- Message de fallback si l'audio ne charge pas -->
             Your browser does not support the audio tag.
         </audio>
         <script>
             const audio = document.getElementById("background-audio");
 
-// Définir le volume (par exemple, à 50%)
 audio.volume = 0.2;
         </script>
     
